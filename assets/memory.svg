@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="530" viewBox="0 0 1400 530">
+  <rect width="1400" height="530" rx="30" fill="#0b1220"/>
+  <text x="70" y="64" font-size="34" font-family="Arial" font-weight="800" fill="#fff">Making a ~1B model less painful to train</text>
+  <text x="70" y="98" font-size="18" font-family="Arial" fill="#94a3b8">No single magic trick. The code stacks several modest memory-saving choices.</text>
+  <g font-family="Arial">
+    <g transform="translate(70 145)">
+      <rect width="280" height="270" rx="24" fill="#132033" stroke="#60a5fa" stroke-width="2"/>
+      <text x="140" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">BF16</text>
+      <text x="140" y="82" text-anchor="middle" font-size="16" fill="#bfdbfe">CUDA autocast</text>
+      <text x="35" y="122" font-size="14" fill="#cbd5e1">• model → bfloat16</text>
+      <text x="35" y="150" font-size="14" fill="#cbd5e1">• forward in BF16</text>
+      <text x="35" y="178" font-size="14" fill="#cbd5e1">• no GradScaler when BF16</text>
+      <text x="35" y="218" font-size="13" fill="#64748b">less memory pressure</text>
+    </g>
+    <g transform="translate(390 145)">
+      <rect width="280" height="270" rx="24" fill="#172b21" stroke="#34d399" stroke-width="2"/>
+      <text x="140" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">AdamW8bit</text>
+      <text x="140" y="82" text-anchor="middle" font-size="16" fill="#bbf7d0">bitsandbytes</text>
+      <text x="35" y="122" font-size="14" fill="#cbd5e1">• enabled when available</text>
+      <text x="35" y="150" font-size="14" fill="#cbd5e1">• fallback to torch AdamW</text>
+      <text x="35" y="178" font-size="14" fill="#cbd5e1">• same training entry point</text>
+      <text x="35" y="218" font-size="13" fill="#64748b">optimizer-state savings</text>
+    </g>
+    <g transform="translate(710 145)">
+      <rect width="280" height="270" rx="24" fill="#2a2136" stroke="#a78bfa" stroke-width="2"/>
+      <text x="140" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">Checkpointing</text>
+      <text x="140" y="82" text-anchor="middle" font-size="16" fill="#ddd6fe">activation trade-off</text>
+      <text x="35" y="122" font-size="14" fill="#cbd5e1">• checkpoint Transformer blocks</text>
+      <text x="35" y="150" font-size="14" fill="#cbd5e1">• lower activation memory</text>
+      <text x="35" y="178" font-size="14" fill="#cbd5e1">• extra recomputation</text>
+      <text x="35" y="218" font-size="13" fill="#64748b">memory ↔ compute trade</text>
+    </g>
+    <g transform="translate(1030 145)">
+      <rect width="280" height="270" rx="24" fill="#302319" stroke="#fb923c" stroke-width="2"/>
+      <text x="140" y="48" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">Accumulation</text>
+      <text x="140" y="82" text-anchor="middle" font-size="16" fill="#fed7aa">small micro-batches</text>
+      <text x="35" y="122" font-size="14" fill="#cbd5e1">• batch size can stay small</text>
+      <text x="35" y="150" font-size="14" fill="#cbd5e1">• gradients accumulate</text>
+      <text x="35" y="178" font-size="14" fill="#cbd5e1">• optimizer step later</text>
+      <text x="35" y="218" font-size="13" fill="#64748b">practical on limited VRAM</text>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="520" viewBox="0 0 1400 520">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0b1020"/>
+      <stop offset="0.55" stop-color="#18243d"/>
+      <stop offset="1" stop-color="#0e7490"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67e8f9"/>
+      <stop offset="1" stop-color="#a78bfa"/>
+    </linearGradient>
+    <linearGradient id="cardGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#67e8f9" stop-opacity="0.25"/>
+      <stop offset="1" stop-color="#a78bfa" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1400" height="520" rx="36" fill="url(#bg)"/>
+  <circle cx="1120" cy="80" r="180" fill="#67e8f9" opacity=".07"/>
+  <circle cx="1250" cy="430" r="240" fill="#a78bfa" opacity=".06"/>
+
+  <g opacity=".16" fill="none" stroke="#fff">
+    <path d="M920 100h360M880 160h430M940 220h360M900 280h410M950 340h340M910 400h390"/>
+    <path d="M990 65v390M1060 45v420M1130 85v380M1200 55v420"/>
+  </g>
+
+  <g transform="translate(72 62)">
+    <rect width="76" height="76" rx="20" fill="url(#glow)"/>
+    <text x="38" y="51" text-anchor="middle" font-size="34" font-family="Arial, sans-serif" font-weight="700" fill="#07111f">KR</text>
+  </g>
+
+  <text x="72" y="202" font-size="74" font-family="Arial, sans-serif" font-weight="800" fill="#fff">Korean LLM v4</text>
+  <text x="76" y="254" font-size="28" font-family="Arial, sans-serif" fill="#cbd5e1">A small 1B-class Korean language model built by one persistent experimenter.</text>
+
+  <g transform="translate(76 310)">
+    <rect width="174" height="50" rx="25" fill="#ffffff" opacity=".10"/>
+    <text x="87" y="33" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#fff">~1.09B Params</text>
+    <rect x="188" width="160" height="50" rx="25" fill="#ffffff" opacity=".10"/>
+    <text x="268" y="33" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#fff">Korean-first</text>
+    <rect x="362" width="182" height="50" rx="25" fill="#ffffff" opacity=".10"/>
+    <text x="453" y="33" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#fff">Pretrain → SFT</text>
+    <rect x="558" width="190" height="50" rx="25" fill="#ffffff" opacity=".10"/>
+    <text x="653" y="33" text-anchor="middle" font-size="20" font-family="Arial, sans-serif" font-weight="700" fill="#fff">Memory-aware</text>
+  </g>
+
+  <g transform="translate(76 395)">
+    <text x="0" y="0" font-size="18" font-family="Arial, sans-serif" fill="#94a3b8">FROM “CAN I MAKE ONE?” TO “IT ACTUALLY ANSWERED ME.”</text>
+  </g>
+
+  <!-- 새롭게 디자인된 우측 트랜스포머 블록 요소 -->
+  <g transform="translate(980 110)">
+    <!-- 메인 컨테이너 패널 -->
+    <rect width="340" height="300" rx="24" fill="#0b1329" stroke="url(#glow)" stroke-width="2" opacity="0.95"/>
+    
+    <!-- 패널 헤더 -->
+    <text x="28" y="42" font-size="16" font-family="Arial, sans-serif" font-weight="800" fill="#67e8f9" letter-spacing="1">ARCHITECTURE</text>
+    <rect x="230" y="24" width="82" height="26" rx="13" fill="#a78bfa" opacity="0.2"/>
+    <text x="271" y="41" text-anchor="middle" font-size="12" font-family="Arial, sans-serif" font-weight="700" fill="#a78bfa">20 Layers</text>
+
+    <!-- 레이어 1: Feed Forward Layer -->
+    <g transform="translate(28 62)">
+      <rect width="284" height="48" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <rect width="6" height="48" rx="3" fill="#a78bfa"/>
+      <text x="20" y="29" font-size="14" font-family="Arial, sans-serif" font-weight="700" fill="#e2e8f0">Feed Forward Block</text>
+      <text x="264" y="29" text-anchor="end" font-size="12" font-family="Arial, sans-serif" fill="#94a3b8">SwiGLU</text>
+    </g>
+
+    <!-- 연결 연결선 (Flow Dots) -->
+    <circle cx="170" cy="122" r="3" fill="#67e8f9" opacity="0.6"/>
+    <circle cx="170" cy="130" r="3" fill="#67e8f9" opacity="0.9"/>
+    <circle cx="170" cy="138" r="3" fill="#67e8f9" opacity="0.6"/>
+
+    <!-- 레이어 2: Multi-Head Attention Layer -->
+    <g transform="translate(28 148)">
+      <rect width="284" height="60" rx="12" fill="url(#cardGlow)" stroke="#67e8f9" stroke-width="1.5"/>
+      <rect width="6" height="60" rx="3" fill="#67e8f9"/>
+      <text x="20" y="28" font-size="14" font-family="Arial, sans-serif" font-weight="700" fill="#fff">Self-Attention Layer</text>
+      <text x="20" y="46" font-size="12" font-family="Arial, sans-serif" fill="#94a3b8">RoPE • KV Cache Optimized</text>
+      <circle cx="254" cy="30" r="10" fill="#67e8f9" opacity="0.2"/>
+      <circle cx="254" cy="30" r="4" fill="#67e8f9"/>
+    </g>
+
+    <!-- 레이어 3: Token Embedding -->
+    <g transform="translate(28 226)">
+      <rect width="284" height="44" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+      <rect width="6" height="44" rx="3" fill="#38bdf8"/>
+      <text x="20" y="27" font-size="13" font-family="Arial, sans-serif" font-weight="700" fill="#cbd5e1">Korean Tokenizer &amp; Embeddings</text>
+    </g>
+  </g>
+</svg>

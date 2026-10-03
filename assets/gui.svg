@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="650" viewBox="0 0 1400 650">
+  <rect width="1400" height="650" rx="28" fill="#e2e8f0"/>
+  <rect x="45" y="38" width="1310" height="574" rx="22" fill="#f8fafc" stroke="#94a3b8" stroke-width="2"/>
+  <rect x="45" y="38" width="1310" height="62" rx="22" fill="#0f172a"/>
+  <circle cx="78" cy="69" r="7" fill="#f87171"/><circle cx="102" cy="69" r="7" fill="#fbbf24"/><circle cx="126" cy="69" r="7" fill="#4ade80"/>
+  <text x="160" y="77" font-size="21" font-family="Arial" font-weight="700" fill="#fff">KoreanLLM Training Monitor 📊 + Chat</text>
+  <rect x="74" y="128" width="610" height="430" rx="18" fill="#fff" stroke="#cbd5e1"/>
+  <text x="96" y="164" font-size="20" font-family="Arial" font-weight="700" fill="#0f172a">📉 Loss Curve (실시간)</text>
+  <rect x="108" y="194" width="542" height="314" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <g stroke="#cbd5e1" stroke-width="1">
+    <path d="M140 250h470M140 310h470M140 370h470M140 430h470"/>
+    <path d="M200 220v250M290 220v250M380 220v250M470 220v250M560 220v250"/>
+  </g>
+  <polyline points="140,455 180,418 220,430 260,390 300,402 340,340 380,355 420,300 460,318 500,264 540,282 610,238" fill="none" stroke="#2563eb" stroke-width="4"/>
+  <rect x="716" y="128" width="610" height="430" rx="18" fill="#fff" stroke="#cbd5e1"/>
+  <text x="738" y="164" font-size="20" font-family="Arial" font-weight="700" fill="#0f172a">💬 모델과 대화하기 (CPU 구동)</text>
+  <rect x="738" y="190" width="566" height="280" rx="12" fill="#0f172a"/>
+  <text x="762" y="226" font-size="17" font-family="Arial" fill="#93c5fd">나: 안녕?</text>
+  <text x="762" y="260" font-size="17" font-family="Arial" fill="#f8fafc">모델: 안녕하세요! 무엇을 도와드릴까요?</text>
+  <text x="762" y="314" font-size="17" font-family="Arial" fill="#93c5fd">나: 한국의 수도는?</text>
+  <text x="762" y="348" font-size="17" font-family="Arial" fill="#f8fafc">모델: ...</text>
+  <rect x="738" y="486" width="440" height="44" rx="10" fill="#f8fafc" stroke="#cbd5e1"/>
+  <text x="758" y="514" font-size="15" font-family="Arial" fill="#64748b">메시지를 입력하세요...</text>
+  <rect x="1192" y="486" width="112" height="44" rx="10" fill="#2563eb"/>
+  <text x="1248" y="514" text-anchor="middle" font-size="16" font-family="Arial" font-weight="700" fill="#fff">전송</text>
+</svg>

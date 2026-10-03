@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="360" viewBox="0 0 1400 360">
+  <rect width="1400" height="360" rx="30" fill="#0b1220"/>
+  <text x="70" y="62" font-size="34" font-family="Arial" font-weight="800" fill="#fff">Technology stack</text>
+  <g font-family="Arial">
+    <g transform="translate(70 115)">
+      <rect width="280" height="150" rx="22" fill="#132033" stroke="#60a5fa"/><text x="140" y="46" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">PyTorch</text><text x="140" y="82" text-anchor="middle" font-size="15" fill="#bfdbfe">model + training loop</text><text x="140" y="112" text-anchor="middle" font-size="15" fill="#94a3b8">autograd / CUDA / AMP</text>
+    </g>
+    <g transform="translate(390 115)">
+      <rect width="280" height="150" rx="22" fill="#182316" stroke="#34d399"/><text x="140" y="46" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">Hugging Face</text><text x="140" y="82" text-anchor="middle" font-size="15" fill="#bbf7d0">datasets + tokenizer</text><text x="140" y="112" text-anchor="middle" font-size="15" fill="#94a3b8">local parquet cache</text>
+    </g>
+    <g transform="translate(710 115)">
+      <rect width="280" height="150" rx="22" fill="#2b1f2f" stroke="#a78bfa"/><text x="140" y="46" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">bitsandbytes</text><text x="140" y="82" text-anchor="middle" font-size="15" fill="#ddd6fe">optional 8-bit optimizer</text><text x="140" y="112" text-anchor="middle" font-size="15" fill="#94a3b8">graceful fallback</text>
+    </g>
+    <g transform="translate(1030 115)">
+      <rect width="280" height="150" rx="22" fill="#2c2119" stroke="#fb923c"/><text x="140" y="46" text-anchor="middle" font-size="23" font-weight="700" fill="#fff">Tkinter + Matplotlib</text><text x="140" y="82" text-anchor="middle" font-size="15" fill="#fed7aa">training monitor</text><text x="140" y="112" text-anchor="middle" font-size="15" fill="#94a3b8">loss view + chat UI</text>
+    </g>
+  </g>
+</svg>

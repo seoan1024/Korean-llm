@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="420" viewBox="0 0 1500 420">
+  <rect width="1500" height="420" rx="30" fill="#0b1220"/>
+  <text x="70" y="62" font-size="34" font-family="Arial" font-weight="800" fill="#fff">The road to v4</text>
+  <text x="70" y="95" font-size="18" font-family="Arial" fill="#94a3b8">Not a straight line. Mostly experiments, failures, fixes, and the next attempt.</text>
+  <g font-family="Arial">
+    <line x1="150" y1="230" x2="1350" y2="230" stroke="#475569" stroke-width="6"/>
+    <g transform="translate(90 160)">
+      <circle cx="70" cy="70" r="48" fill="#172033" stroke="#60a5fa" stroke-width="3"/>
+      <text x="70" y="78" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">50M</text>
+      <text x="70" y="144" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">초기 실험</text>
+      <text x="70" y="171" text-anchor="middle" font-size="14" fill="#94a3b8">문장 생성</text>
+    </g>
+    <g transform="translate(390 160)">
+      <circle cx="70" cy="70" r="48" fill="#1a2333" stroke="#a78bfa" stroke-width="3"/>
+      <text x="70" y="78" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">541M</text>
+      <text x="70" y="144" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">v1</text>
+      <text x="70" y="171" text-anchor="middle" font-size="14" fill="#94a3b8">채팅형 모델</text>
+    </g>
+    <g transform="translate(690 160)">
+      <circle cx="70" cy="70" r="48" fill="#202536" stroke="#34d399" stroke-width="3"/>
+      <text x="70" y="78" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">1.09B</text>
+      <text x="70" y="144" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">v2</text>
+      <text x="70" y="171" text-anchor="middle" font-size="14" fill="#94a3b8">버그 발견</text>
+    </g>
+    <g transform="translate(990 160)">
+      <circle cx="70" cy="70" r="48" fill="#2a211f" stroke="#fb923c" stroke-width="3"/>
+      <text x="70" y="78" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">1B급</text>
+      <text x="70" y="144" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">v3</text>
+      <text x="70" y="171" text-anchor="middle" font-size="14" fill="#94a3b8">양자화</text>
+    </g>
+    <g transform="translate(1290 160)">
+      <circle cx="70" cy="70" r="48" fill="#2a1d30" stroke="#f472b6" stroke-width="3"/>
+      <text x="70" y="78" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">v4</text>
+      <text x="70" y="144" text-anchor="middle" font-size="19" font-weight="700" fill="#fff">Pretrain</text>
+      <text x="70" y="171" text-anchor="middle" font-size="14" fill="#94a3b8">→ SFT</text>
+    </g>
+  </g>
+</svg>

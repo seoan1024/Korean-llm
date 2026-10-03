@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="460" viewBox="0 0 1500 460">
+  <rect width="1500" height="460" rx="30" fill="#0b1220"/>
+  <text x="70" y="62" font-size="34" font-family="Arial" font-weight="800" fill="#fff">Data → Model pipeline</text>
+  <text x="70" y="96" font-size="18" font-family="Arial" fill="#94a3b8">The project keeps data management, formatting and training responsibilities separate.</text>
+  <g font-family="Arial">
+    <g transform="translate(70 150)">
+      <rect width="220" height="170" rx="22" fill="#132033" stroke="#60a5fa" stroke-width="2"/>
+      <text x="110" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">01 · Download</text>
+      <text x="110" y="78" text-anchor="middle" font-size="16" fill="#bfdbfe">HF Datasets</text>
+      <text x="110" y="110" text-anchor="middle" font-size="14" fill="#94a3b8">standard / streaming</text>
+      <text x="110" y="138" text-anchor="middle" font-size="14" fill="#94a3b8">retry on failure</text>
+    </g>
+    <path d="M290 235h64" stroke="#67e8f9" stroke-width="4"/><polygon points="366,235 348,225 348,245" fill="#67e8f9"/>
+    <g transform="translate(380 150)">
+      <rect width="220" height="170" rx="22" fill="#172433" stroke="#34d399" stroke-width="2"/>
+      <text x="110" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">02 · Cache</text>
+      <text x="110" y="78" text-anchor="middle" font-size="16" fill="#bbf7d0">manifest + parquet</text>
+      <text x="110" y="110" text-anchor="middle" font-size="14" fill="#94a3b8">hash-based lookup</text>
+      <text x="110" y="138" text-anchor="middle" font-size="14" fill="#94a3b8">local reuse</text>
+    </g>
+    <path d="M600 235h64" stroke="#67e8f9" stroke-width="4"/><polygon points="676,235 658,225 658,245" fill="#67e8f9"/>
+    <g transform="translate(690 150)">
+      <rect width="220" height="170" rx="22" fill="#2a2033" stroke="#a78bfa" stroke-width="2"/>
+      <text x="110" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">03 · Format</text>
+      <text x="110" y="78" text-anchor="middle" font-size="16" fill="#ddd6fe">### 질문 / 응답</text>
+      <text x="110" y="110" text-anchor="middle" font-size="14" fill="#94a3b8">clean + normalize</text>
+      <text x="110" y="138" text-anchor="middle" font-size="14" fill="#94a3b8">response-only loss</text>
+    </g>
+    <path d="M910 235h64" stroke="#67e8f9" stroke-width="4"/><polygon points="986,235 968,225 968,245" fill="#67e8f9"/>
+    <g transform="translate(1000 150)">
+      <rect width="220" height="170" rx="22" fill="#33211f" stroke="#fb923c" stroke-width="2"/>
+      <text x="110" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">04 · Tokenize</text>
+      <text x="110" y="78" text-anchor="middle" font-size="16" fill="#fed7aa">pad / eos</text>
+      <text x="110" y="110" text-anchor="middle" font-size="14" fill="#94a3b8">truncate to max_len</text>
+      <text x="110" y="138" text-anchor="middle" font-size="14" fill="#94a3b8">labels + -100 mask</text>
+    </g>
+    <path d="M1220 235h64" stroke="#67e8f9" stroke-width="4"/><polygon points="1296,235 1278,225 1278,245" fill="#67e8f9"/>
+    <g transform="translate(1310 150)">
+      <rect width="140" height="170" rx="22" fill="#17222b" stroke="#facc15" stroke-width="2"/>
+      <text x="70" y="46" text-anchor="middle" font-size="22" font-weight="700" fill="#fff">05</text>
+      <text x="70" y="78" text-anchor="middle" font-size="17" font-weight="700" fill="#fff">Train</text>
+      <text x="70" y="109" text-anchor="middle" font-size="14" fill="#fef08a">BF16</text>
+      <text x="70" y="134" text-anchor="middle" font-size="14" fill="#fef08a">8-bit opt.</text>
+    </g>
+  </g>
+</svg>

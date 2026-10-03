@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820">
+  <rect width="1400" height="820" rx="28" fill="#0b1220"/>
+  <text x="70" y="72" font-size="38" font-family="Arial, sans-serif" font-weight="800" fill="#fff">KoreanLLM v4 · Decoder-style Transformer stack</text>
+  <text x="70" y="112" font-size="19" font-family="Arial, sans-serif" fill="#94a3b8">The code builds the core blocks directly: RMSNorm, RoPE, attention, SwiGLU and weight tying.</text>
+  <g transform="translate(80 160)">
+    <rect width="240" height="96" rx="20" fill="#162033" stroke="#67e8f9" stroke-width="2"/>
+    <text x="120" y="39" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700" fill="#fff">Tokenizer</text>
+    <text x="120" y="68" text-anchor="middle" font-size="16" font-family="Arial" fill="#94a3b8">Llama-3-Open-Ko tokenizer</text>
+    <path d="M120 96v46" stroke="#67e8f9" stroke-width="3"/>
+    <polygon points="120,154 111,140 129,140" fill="#67e8f9"/>
+    <rect y="164" width="240" height="92" rx="20" fill="#182a3b" stroke="#a78bfa" stroke-width="2"/>
+    <text x="120" y="201" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700" fill="#fff">Embedding</text>
+    <text x="120" y="230" text-anchor="middle" font-size="16" font-family="Arial" fill="#94a3b8">vocab × 1920</text>
+  </g>
+  <g transform="translate(430 145)">
+    <rect width="600" height="590" rx="28" fill="#111827" stroke="#334155" stroke-width="2"/>
+    <text x="300" y="42" text-anchor="middle" font-size="24" font-family="Arial" font-weight="700" fill="#e2e8f0">TransformerBlock × 20</text>
+    <rect x="50" y="72" width="500" height="118" rx="20" fill="#172554"/>
+    <text x="300" y="108" text-anchor="middle" font-size="23" font-family="Arial" font-weight="700" fill="#fff">RMSNorm → Multi-Head Attention</text>
+    <text x="300" y="140" text-anchor="middle" font-size="16" font-family="Arial" fill="#bfdbfe">Q / K / V → RoPE → scaled dot-product attention → output projection</text>
+    <path d="M300 190v46" stroke="#60a5fa" stroke-width="3"/><polygon points="300,244 291,230 309,230" fill="#60a5fa"/>
+    <rect x="50" y="254" width="500" height="96" rx="20" fill="#2b1d3f"/>
+    <text x="300" y="293" text-anchor="middle" font-size="23" font-family="Arial" font-weight="700" fill="#fff">Residual Connection</text>
+    <text x="300" y="322" text-anchor="middle" font-size="16" font-family="Arial" fill="#ddd6fe">x = x + attention(x)</text>
+    <path d="M300 350v46" stroke="#a78bfa" stroke-width="3"/><polygon points="300,404 291,390 309,390" fill="#a78bfa"/>
+    <rect x="50" y="414" width="500" height="118" rx="20" fill="#103126"/>
+    <text x="300" y="451" text-anchor="middle" font-size="23" font-family="Arial" font-weight="700" fill="#fff">RMSNorm → SwiGLU FFN</text>
+    <text x="300" y="484" text-anchor="middle" font-size="16" font-family="Arial" fill="#bbf7d0">hidden dimension = 2.5 × 1920</text>
+    <text x="300" y="512" text-anchor="middle" font-size="16" font-family="Arial" fill="#bbf7d0">x = x + FFN(x)</text>
+  </g>
+  <g transform="translate(1100 160)">
+    <rect width="220" height="96" rx="20" fill="#172033" stroke="#fbbf24" stroke-width="2"/>
+    <text x="110" y="38" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700" fill="#fff">RMSNorm</text>
+    <text x="110" y="68" text-anchor="middle" font-size="16" font-family="Arial" fill="#cbd5e1">final normalization</text>
+    <path d="M110 96v48" stroke="#fbbf24" stroke-width="3"/><polygon points="110,156 101,142 119,142" fill="#fbbf24"/>
+    <rect y="166" width="220" height="110" rx="20" fill="#3a1f28" stroke="#fb7185" stroke-width="2"/>
+    <text x="110" y="204" text-anchor="middle" font-size="22" font-family="Arial" font-weight="700" fill="#fff">Output</text>
+    <text x="110" y="234" text-anchor="middle" font-size="16" font-family="Arial" fill="#fecdd3">weight tied to embedding</text>
+  </g>
+  <path d="M320 376h105" stroke="#67e8f9" stroke-width="4"/>
+  <polygon points="438,376 420,366 420,386" fill="#67e8f9"/>
+  <path d="M1030 380h68" stroke="#67e8f9" stroke-width="4"/>
+  <polygon points="1110,380 1092,370 1092,390" fill="#67e8f9"/>
+  <g transform="translate(82 665)">
+    <rect width="1240" height="92" rx="18" fill="#111827"/>
+    <text x="620" y="34" text-anchor="middle" font-size="17" font-family="Arial" fill="#94a3b8">Core configuration</text>
+    <text x="180" y="66" text-anchor="middle" font-size="20" font-family="Arial" font-weight="700" fill="#fff">dim 1920</text>
+    <text x="470" y="66" text-anchor="middle" font-size="20" font-family="Arial" font-weight="700" fill="#fff">20 layers</text>
+    <text x="760" y="66" text-anchor="middle" font-size="20" font-family="Arial" font-weight="700" fill="#fff">10 heads</text>
+    <text x="1060" y="66" text-anchor="middle" font-size="20" font-family="Arial" font-weight="700" fill="#fff">max seq 512*</text>
+  </g>
+  <text x="80" y="792" font-size="14" font-family="Arial" fill="#64748b">* TrainingConfig defaults to 512; the model class itself supports a larger max_seq_len parameter.</text>
+</svg>
